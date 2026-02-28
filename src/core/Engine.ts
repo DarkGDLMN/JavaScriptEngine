@@ -1,9 +1,8 @@
-export class Engine {
-  start() {
-    console.log("Engine starting...");
-  }
+import { Renderer, type Options } from "./Renderer";
 
-  stop() {
-    console.log("Engine stopping...");
-  }
+export class Engine {
+    private Renderer: Renderer
+    constructor(options: Options) {
+        this.Renderer = new Renderer(options)
+    }
 }
